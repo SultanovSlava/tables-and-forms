@@ -11,7 +11,7 @@
 
     <form>
         <label>
-            Ваше животное
+            Тип животного
             <select name="petType">
                 <option value="cat">Кошка</option>
                 <option value="dog">Собака</option>
@@ -19,11 +19,11 @@
             </select>
         </label>
         <label>
-            Гендер
+            Пол
             <select name="gender">
                 <option value="boy">Самец</option>
                 <option value="girl">Самка</option>
-                <option value="none" selected>Нет</option>
+                <option value="none" selected>Не выбран</option>
             </select>
         </label>
         <label>Цвет глаз
@@ -32,23 +32,27 @@
         <label>Длина хвоста
             <input type="number" name="tailLength" min="7" max="120" required>
         </label>
-        <label>Имя
-            <input type="text" name="name" minlength="3" maxlength="50" required>
+        <label>Имя хозяина
+            <input type="text" name="name" minlength="3" maxlength="50" placeholder="Ваше имя" required>
         </label>
         <label>Дата рождения
             <input type="date" name="dateOfBirth" required>
         </label>
         <label>Email
-            <input type="email" name="email" required>
+            <input type="email" name="email" placeholder="abc@mail.ru" required>
         </label>
         <label>Номер телефона
-            <input type="number" name="phone" required>
+            <input type="number" name="phone" placeholder="+71112223344" required>
         </label>
-        <label>Согласен с правилами
+        <label>
             <input type="checkbox" name="rules" value="true" required>
+            Согласен с правилами
         </label>
         <button name="submit" formmethod="post" formaction="/pets/orders">
             Отправить
+        </button>
+        <button type="reset" style="margin-left: 20px">
+            Очистить форму
         </button>
     </form>
 </main>
